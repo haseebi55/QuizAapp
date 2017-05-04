@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/AppTheme"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.example.android.justjava.MainActivity">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:text="Solar System Quiz"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/question1"
+            style="@style/HeaderTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:text="Q.1 How Many planets are there in our solar system?" />
+
+        <RadioGroup
+            android:id="@+id/q1radiobox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/question1">
+
+            <RadioButton
+                android:id="@+id/A1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8" />
+
+            <RadioButton
+                android:id="@+id/q1a2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5" />
+
+            <RadioButton
+                android:id="@+id/q1a3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/HeaderTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:text="Q.2 which planet or star is the centre of our system? " />
+
+        <RadioGroup
+            android:id="@+id/q2radiobox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/question1">
+
+            <RadioButton
+                android:id="@+id/q2a1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Saturn" />
+
+            <RadioButton
+                android:id="@+id/q2a2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Moon" />
+
+            <RadioButton
+                android:id="@+id/A2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sun" />
+        </RadioGroup>
+
+        <TextView
+            style="@style/HeaderTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:text="Q.3 Which Planets have rings? " />
+
+        <RadioGroup
+            android:id="@+id/q3radiobox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/question1">
+
+            <RadioButton
+                android:id="@+id/q3a1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Saturn and Jupiter" />
+
+            <RadioButton
+                android:id="@+id/A3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Staurn, Jupiter, Uranus and Neptune" />
+
+            <RadioButton
+                android:id="@+id/q3a3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Neptune and Mars" />
+        </RadioGroup>
+
+        <TextView
+            style="@style/HeaderTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:text="Q.4 What is the great red spot? " />
+
+        <RadioGroup
+            android:id="@+id/q4radiobox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/question1">
+
+            <RadioButton
+                android:id="@+id/A4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A storm on jupiter" />
+
+            <RadioButton
+                android:id="@+id/q4a2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A smudge on the Hubble telescope" />
+
+            <RadioButton
+                android:id="@+id/q4a3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A storm on staurn" />
+        </RadioGroup>
+
+        <TextView
+            style="@style/HeaderTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:text="Q.5 Which of these Phenomena occurs on mars? " />
+
+        <RadioGroup
+            android:id="@+id/q5radiobox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/question1">
+
+            <RadioButton
+                android:id="@+id/q5a1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tidal Waves" />
+
+            <RadioButton
+                android:id="@+id/A5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dust Storms" />
+
+            <RadioButton
+                android:id="@+id/q5a3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hurricanes" />
+        </RadioGroup>
+
+        <TextView
+            style="@style/HeaderTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:text="Q.6 About How long is a day on saturn? " />
+
+        <RadioGroup
+            android:id="@+id/q6radiobox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/question1">
+
+            <RadioButton
+                android:id="@+id/q6a1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="24 Hours" />
+
+            <RadioButton
+                android:id="@+id/A6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10 Hours and 47 min" />
+
+            <RadioButton
+                android:id="@+id/q6a3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4 hours and 57 min" />
+        </RadioGroup>
+
+        <TextView
+            style="@style/HeaderTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:text="Q.7 What's the Highest measured wind speeds at Neptune? " />
+
+        <RadioGroup
+            android:id="@+id/q7radiobox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/question1">
+
+            <RadioButton
+                android:id="@+id/q7a1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="350 MPH" />
+
+            <RadioButton
+                android:id="@+id/A7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1500 mph" />
+
+            <RadioButton
+                android:id="@+id/q7a3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="420 mph" />
+        </RadioGroup>
+
+        <TextView
+            style="@style/HeaderTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:text="Q.8 Which feature ditinguishes Uranus from other planets? " />
+
+        <RadioGroup
+            android:id="@+id/q8radiobox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/question1">
+
+            <RadioButton
+                android:id="@+id/q8a1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="It's the farthest planet from the sun." />
+
+            <RadioButton
+                android:id="@+id/A8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="It's tilted over on it's side." />
+
+            <RadioButton
+                android:id="@+id/q8a3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4 hours and 57 min" />
+        </RadioGroup>
+
+        <TextView
+            style="@style/HeaderTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:text="Q.9 Which planet has the highest mountain and the deepest valley? " />
+
+        <RadioGroup
+            android:id="@+id/q9radiobox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/question1">
+
+            <RadioButton
+                android:id="@+id/A9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mars" />
+
+            <RadioButton
+                android:id="@+id/q9a2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pluto" />
+
+            <RadioButton
+                android:id="@+id/q9a3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Earth" />
+        </RadioGroup>
+
+        <TextView
+            style="@style/HeaderTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:text="Q.10 The temperature on this plaent's surface is hot enough to melt lead.Which one? " />
+
+        <RadioGroup
+            android:id="@+id/q10radiobox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/question1">
+
+            <RadioButton
+                android:id="@+id/A10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Venus" />
+
+            <RadioButton
+                android:id="@+id/q10a2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pluto" />
+
+            <RadioButton
+                android:id="@+id/q10a3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Earth" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/q1radiobox"
+                android:onClick="checkResult"
+                android:text="Submit"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/Score_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="your score = 0"
+                android:layout_weight="1"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/q1radiobox"
+                android:onClick="onClick"
+
+                android:text="reset"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>
