@@ -20,9 +20,13 @@
             android:layout_marginLeft="80dp"
             android:text="Solar System Quiz"
             android:textSize="25sp" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:id="@+id/Name"/>
 
         <TextView
-            android:id="@+id/question1"
             style="@style/HeaderTextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -31,31 +35,70 @@
             android:paddingTop="10dp"
             android:text="Q.1 How Many planets are there in our solar system?" />
 
-        <RadioGroup
-            android:id="@+id/q1radiobox"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/question1">
+            android:orientation="horizontal">
 
-            <RadioButton
-                android:id="@+id/A1"
+            <CheckBox
+                android:id="@+id/Answer_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="8" />
+                android:textAppearance="?android:textAppearanceMedium" />
 
-            <RadioButton
-                android:id="@+id/q1a2"
+            <TextView
+                style="@style/HeaderTextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="5" />
+                android:paddingLeft="24dp"
+                android:text="8"
+                android:textSize="16sp" />
 
-            <RadioButton
-                android:id="@+id/q1a3"
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/HeaderTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/Answer_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="7" />
+                android:textAppearance="?android:textAppearanceMedium" />
 
-        </RadioGroup>
+            <TextView
+                style="@style/HeaderTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="24dp"
+                android:text="5"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/HeaderTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/Answer_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:textAppearanceMedium" />
+
+            <TextView
+                style="@style/HeaderTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="24dp"
+                android:text="7"
+                android:textSize="16sp" />
+
+        </LinearLayout>
 
         <TextView
             android:id="@+id/textView"
@@ -71,7 +114,7 @@
             android:id="@+id/q2radiobox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/question1">
+            >
 
             <RadioButton
                 android:id="@+id/q2a1"
@@ -105,7 +148,7 @@
             android:id="@+id/q3radiobox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/question1">
+            >
 
             <RadioButton
                 android:id="@+id/q3a1"
@@ -139,7 +182,7 @@
             android:id="@+id/q4radiobox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/question1">
+            >
 
             <RadioButton
                 android:id="@+id/A4"
@@ -173,7 +216,7 @@
             android:id="@+id/q5radiobox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/question1">
+            >
 
             <RadioButton
                 android:id="@+id/q5a1"
@@ -206,8 +249,7 @@
         <RadioGroup
             android:id="@+id/q6radiobox"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/question1">
+            android:layout_height="wrap_content">
 
             <RadioButton
                 android:id="@+id/q6a1"
@@ -241,7 +283,7 @@
             android:id="@+id/q7radiobox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/question1">
+            >
 
             <RadioButton
                 android:id="@+id/q7a1"
@@ -275,7 +317,7 @@
             android:id="@+id/q8radiobox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/question1">
+            >
 
             <RadioButton
                 android:id="@+id/q8a1"
@@ -309,7 +351,7 @@
             android:id="@+id/q9radiobox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/question1">
+            >
 
             <RadioButton
                 android:id="@+id/A9"
@@ -343,7 +385,7 @@
             android:id="@+id/q10radiobox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/question1">
+            >
 
             <RadioButton
                 android:id="@+id/A10"
@@ -372,7 +414,6 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/q1radiobox"
                 android:onClick="checkResult"
                 android:text="Submit"
                 android:layout_weight="1"/>
@@ -387,7 +428,6 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/q1radiobox"
                 android:onClick="onClick"
 
                 android:text="reset"
