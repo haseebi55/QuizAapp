@@ -20,11 +20,18 @@
             android:layout_marginLeft="80dp"
             android:text="Solar System Quiz"
             android:textSize="25sp" />
+        <TextView
+            style="@style/HeaderTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:text="Q.1 which planet is the closest to the Earth?" />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Name"
-            android:id="@+id/Name"/>
+            android:id="@+id/EntryTxt"/>
 
         <TextView
             style="@style/HeaderTextStyle"
@@ -33,7 +40,7 @@
             android:paddingBottom="10dp"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
-            android:text="Q.1 How Many planets are there in our solar system?" />
+            android:text="Q.2 How Many planets are there in our solar system?" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -99,6 +106,27 @@
                 android:textSize="16sp" />
 
         </LinearLayout>
+        <LinearLayout
+            style="@style/HeaderTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/Answer_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:textAppearanceMedium" />
+
+            <TextView
+                style="@style/HeaderTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="24dp"
+                android:text="9"
+                android:textSize="16sp" />
+
+        </LinearLayout>
 
         <TextView
             android:id="@+id/textView"
@@ -108,7 +136,7 @@
             android:paddingBottom="10dp"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
-            android:text="Q.2 which planet or star is the centre of our system? " />
+            android:text="Q.3 which planet or star is the centre of our system? " />
 
         <RadioGroup
             android:id="@+id/q2radiobox"
@@ -142,7 +170,7 @@
             android:paddingBottom="10dp"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
-            android:text="Q.3 Which Planets have rings? " />
+            android:text="Q.4 Which Planets have rings? " />
 
         <RadioGroup
             android:id="@+id/q3radiobox"
@@ -176,7 +204,7 @@
             android:paddingBottom="10dp"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
-            android:text="Q.4 What is the great red spot? " />
+            android:text="Q.5 What is the great red spot? " />
 
         <RadioGroup
             android:id="@+id/q4radiobox"
@@ -210,7 +238,7 @@
             android:paddingBottom="10dp"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
-            android:text="Q.5 Which of these Phenomena occurs on mars? " />
+            android:text="Q.6 Which of these Phenomena occurs on mars? " />
 
         <RadioGroup
             android:id="@+id/q5radiobox"
@@ -244,7 +272,7 @@
             android:paddingBottom="10dp"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
-            android:text="Q.6 About How long is a day on saturn? " />
+            android:text="Q.7 About How long is a day on saturn? " />
 
         <RadioGroup
             android:id="@+id/q6radiobox"
@@ -277,7 +305,7 @@
             android:paddingBottom="10dp"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
-            android:text="Q.7 What's the Highest measured wind speeds at Neptune? " />
+            android:text="Q.8 What's the Highest measured wind speeds at Neptune? " />
 
         <RadioGroup
             android:id="@+id/q7radiobox"
@@ -311,7 +339,7 @@
             android:paddingBottom="10dp"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
-            android:text="Q.8 Which feature ditinguishes Uranus from other planets? " />
+            android:text="Q.9 Which feature ditinguishes Uranus from other planets? " />
 
         <RadioGroup
             android:id="@+id/q8radiobox"
@@ -345,7 +373,7 @@
             android:paddingBottom="10dp"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
-            android:text="Q.9 Which planet has the highest mountain and the deepest valley? " />
+            android:text="Q.10 Which planet has the highest mountain and the deepest valley? " />
 
         <RadioGroup
             android:id="@+id/q9radiobox"
@@ -379,7 +407,7 @@
             android:paddingBottom="10dp"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
-            android:text="Q.10 The temperature on this plaent's surface is hot enough to melt lead.Which one? " />
+            android:text="Q.11 The temperature on this plaent's surface is hot enough to melt lead.Which one? " />
 
         <RadioGroup
             android:id="@+id/q10radiobox"
@@ -414,22 +442,15 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="checkResult"
+                android:onClick="submitResult"
                 android:text="Submit"
                 android:layout_weight="1"/>
 
-            <TextView
-                android:id="@+id/Score_display"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="your score = 0"
-                android:layout_weight="1"/>
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="onClick"
-
+                android:onClick="Reset"
                 android:text="reset"
                 android:layout_weight="1"/>
 
