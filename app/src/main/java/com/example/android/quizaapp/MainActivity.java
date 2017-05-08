@@ -35,13 +35,11 @@ public class MainActivity extends AppCompatActivity {
         boolean Answer4 = Answer4CheckBox.isChecked();
         EditText editText = (EditText) findViewById(EntryTxt);
         String EntryAns = editText.getText().toString();
-
-//
-    score = Calculatescore(Answer1,Answer2,Answer3,Answer4,EntryAns);
+        score = calculatescore(Answer1,Answer2,Answer3,Answer4,EntryAns);
         displayScore(score);
         score = 0;
     }
-  private int Calculatescore(boolean HasAns1,boolean HasAns2,boolean HasAns3,boolean HasAns4,String EntryAns){
+  private int calculatescore(boolean hasAns1,boolean hasAns2,boolean hasAns3,boolean hasAns4,String entryAns){
       RadioButton rb2;
       RadioButton rb3;
       RadioButton rb4;
@@ -90,28 +88,20 @@ public class MainActivity extends AppCompatActivity {
           score++;
 
       }
-      if (HasAns1 && HasAns2 && HasAns3 && HasAns4){
+      if (hasAns1 && hasAns2 && hasAns3 && hasAns4){
+          score = score;
+      }
+      else if (hasAns1 && hasAns4){
           score = score;
       }
 
-      else if (HasAns1 && HasAns4){
+      else if (!hasAns2 && !hasAns3 && (hasAns1 || hasAns4)) {
           score = score + 1;
       }
-      else if(HasAns1){
-          score = score+1;
-      }
-      else if (HasAns4){
+      if (entryAns.equalsIgnoreCase("Venus") ){
           score = score +1;
       }
-
-
-      if (EntryAns.equalsIgnoreCase("Venus") ){
-          score = score +1;
-      }
-
-
-
-    return score;
+      return score;
   }
 
     private void displayScore(int number) {
@@ -122,7 +112,6 @@ public class MainActivity extends AppCompatActivity {
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
     }
-
 
     public void Reset(View v) {
         score = 0;
