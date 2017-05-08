@@ -11,6 +11,8 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import static com.example.android.quizaapp.R.id.Answer_1;
+import static com.example.android.quizaapp.R.id.Answer_2;
+import static com.example.android.quizaapp.R.id.Answer_3;
 import static com.example.android.quizaapp.R.id.EntryTxt;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,17 +27,21 @@ public class MainActivity extends AppCompatActivity {
     public void submitResult(View v) {
         CheckBox Answer1CheckBox = (CheckBox) findViewById(Answer_1);
         boolean Answer1 = Answer1CheckBox.isChecked();
+        CheckBox Answer2CheckBox = (CheckBox) findViewById(Answer_2);
+        boolean Answer2 = Answer2CheckBox.isChecked();
+        CheckBox Answer3CheckBox = (CheckBox) findViewById(Answer_3);
+        boolean Answer3 = Answer3CheckBox.isChecked();
         CheckBox Answer4CheckBox = (CheckBox) findViewById(R.id.Answer_4);
         boolean Answer4 = Answer4CheckBox.isChecked();
         EditText editText = (EditText) findViewById(EntryTxt);
         String EntryAns = editText.getText().toString();
 
 //
-    score = Calculatescore(Answer1,Answer4,EntryAns);
+    score = Calculatescore(Answer1,Answer2,Answer3,Answer4,EntryAns);
         displayScore(score);
         score = 0;
     }
-  private int Calculatescore(boolean HasAns1,boolean HasAns4,String EntryAns){
+  private int Calculatescore(boolean HasAns1,boolean HasAns2,boolean HasAns3,boolean HasAns4,String EntryAns){
       RadioButton rb2;
       RadioButton rb3;
       RadioButton rb4;
@@ -57,34 +63,38 @@ public class MainActivity extends AppCompatActivity {
       rb10 = (RadioButton) findViewById(R.id.A10);
      int score = 0;
       if (rb2.isChecked()) {
-          score = score + 1;
+          score++;
       }
       if (rb3.isChecked()) {
-          score = score + 1;
+          score++;
       }
       if (rb4.isChecked()) {
-          score = score + 1;
+          score++;
       }
       if (rb5.isChecked()) {
-          score = score + 1;
+          score++;
       }
       if (rb6.isChecked()) {
-          score = score + 1;
+          score++;
       }
       if (rb7.isChecked()) {
-          score = score + 1;
+          score++;
       }
       if (rb8.isChecked()) {
-          score = score + 1;
+          score++;
       }
       if (rb9.isChecked()) {
-          score = score + 1;
+          score++;
       }
       if (rb10.isChecked()) {
-          score = score + 1;
+          score++;
 
       }
-      if (HasAns1 && HasAns4){
+      if (HasAns1 && HasAns2 && HasAns3 && HasAns4){
+          score = score;
+      }
+
+      else if (HasAns1 && HasAns4){
           score = score + 1;
       }
       else if(HasAns1){
@@ -95,12 +105,10 @@ public class MainActivity extends AppCompatActivity {
       }
 
 
-      if (EntryAns == "Venus" ){
+      if (EntryAns.equalsIgnoreCase("Venus") ){
           score = score +1;
       }
-      if (EntryAns == "venus"){
-          score = score + 1;
-      }
+
 
 
     return score;
