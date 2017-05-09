@@ -96,10 +96,10 @@ public class MainActivity extends AppCompatActivity {
       }
 
       else if (!hasAns2 && !hasAns3 && (hasAns1 || hasAns4)) {
-          score = score + 1;
+          score++;
       }
       if (entryAns.equalsIgnoreCase("Venus") ){
-          score = score +1;
+          score++;
       }
       return score;
   }
